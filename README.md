@@ -28,3 +28,6 @@ To get started with the Airflow Data Migration Project, follow these steps:
 
    ```shell
    git clone https://github.com/your-username/airflow-data-migration.git
+2. run minIO container to can access S3 Buckets:
+   ```shell
+   docker run -p 9000:9000 -p 9001:9001 -e "MINIO_ROOT_USER= Mohamed123" -e "MINIO_ROOT_PASSWORD= Mohamed123" -v ./data/:/mnt/data --name minio_sever quay.io/minio/minio server /data --console-address ":9001"
